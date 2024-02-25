@@ -1,193 +1,57 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
-<meta charset='utf-8'>
-<title>Internal Error</title>
+<html><head>
+<link rel="shortcut icon" type="image/x-icon" href="/assets/favicon-65a3525c1102541a4fca58f4bea79200dff259ef6e1222776ca90797b3aaae1c.png">
+<title>Reloading later, please wait ...</title>
+<link rel="stylesheet" media="all" href="/assets/lib/bootstrap/bootstrap.min.self-a9d42f4126c6689e1f08b60a13e2edfe69376e338d8426861a2dd5551f9dea15.css?body=1" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="/assets/lib/font-awesome/font-awesome.self-07b5d681c819a2b28ce4f56f972b194a79ffa6cb5be7397f48a3e6aa1cf3177b.css?body=1" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="/assets/devise/confirmations.self-fe30d34bdb59cf81a0150fb70d37748e35649caf1abbfa5d494d6dbbada145f2.css?body=1" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="/assets/devise/styles.self-033f96a8c55aaeafaf8b18a45198a08a260a8567aec8916b8c9771a6313566a8.css?body=1" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="/assets/global/sidebar.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="/assets/global/style.self-f5a3ed61738885a0a1b99404f2e357bff665086e03ecdfaa3620af8b88663ba3.css?body=1" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="/assets/global/topbar.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="/assets/devise/application.self-28442d27062e5222535535eb193cc9c04c4ce2a2c0bc352599631c5f5bc55bdc.css?body=1" data-turbolinks-track="reload">
 </head>
-<style>
-  header {
-    border-bottom: 1px solid #e5e5e5;
-    padding: 10px;
-    background: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-  body {
-    font-family: "adobe-garamond-pro", Georgia, Serif;
-    font-size: 16px;
-    line-height: 1.375;
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    background: white;
-    position: relative;
-  }
-  
-  ul {
-    border-top: 1px solid #e5e5e5;
-    text-align: center;
-    padding-top: 16px;
-    padding-bottom: 8px;
-    font-size: 16px;
-    list-style: none;
-  }
-  
-  h1 {
-    font-weight: normal;
-    font-size: 40px;
-    margin: 40px;
-  }
-  
-  a {
-    color: black;
-  }
-  
-  button {
-    cursor: pointer;
-    position: relative;
-    white-space: nowrap;
-    border: 2px solid;
-    border-radius: 3px;
-    padding-left: 30px;
-    padding-right: 30px;
-    height: 50px;
-    -webkit-transition: 0.25s ease;
-    transition: 0.25s ease;
-    background-color: #000;
-    border-color: #000;
-    color: #fff;
-    width: fit-content;
-    margin: 0 auto;
-    font-size: 14px;
-  }
-  
-  button:hover {
-    background-color: #6e1eff;
-    border-color: #6e1eff;
-  }
-  
-  footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: white;
-  }
-  
-  .error-message {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    margin: 0;
-    padding: 0 20px;
-    top: calc(50% - 70px);
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-  
-  .error-message::before {
-    content: "500";
-    display: block;
-    position: absolute;
-    top: calc(50% - 50px);
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 535px;
-    line-height: 1;
-    z-index: -1;
-    color: #f8f8f8;
-  }
-  
-  .error-trace {
-    background: #fff;
-    border: 0;
-    border: 3px solid #e5e5e5;
-    color: #666;
-    font-size: 13px;
-    line-height: 1.6em;
-    margin: 20px auto;
-    max-height: 150px;
-    width: 75%;
-    font-family: "Menlo", "Monaco", "Andale Mono", "lucida console",
-      "Courier New", monospace;
-    overflow-x: auto;
-    padding: 5px 9px;
-    text-align: left;
-    word-break: break-word;
-  }
-  
-  .error-trace h1 {
-    font-size: inherit;
-    margin: 0;
-  }
-  
-  .error-trace ul {
-    border: none;
-    padding: 0;
-    text-align: left;
-    font-size: inherit;
-  }
-  
-  .contact-support {
-    margin-bottom: 32px;
-  }
-  
-  .hidden {
-    visibility: hidden;
-  }
-</style>
 <body>
-<div class='error-message'>
-<h1>Oops! Something went wrong...</h1>
-<p>We encountered an error processing your request. No worries, we are working on it. Please try again later.</p>
-<div class='error-trace' style='display: none'>
-::CLOUDFLARE_ERROR_500S_BOX::
+<div style="position: absolute;left: 50%;top:10px">
+<div aria-atomic="true" aria-live="polite" class="toast flash hide" data-delay="10000" role="alert" style="min-width:390px;position:relative;left:-50%">
+<div aria-atomic="true" aria-live="assertive" role="alert">
+<button aria-label="Close" class="ml-2 mb-1 close" data-dismiss="toast" type="button">
+<span aria-hidden="true">×</span>
+</button>
 </div>
-<div class='contact-support'>
-<p>
-If the problem persists, please contact
-<a href="https://m.me/dafoxsupport" target="_blank">FB Support: m.me/dafoxsupport</a>
-with any
-questions.
+</div>
+</div>
+<div class="container" style="max-width: 100%; padding: 0;">
+<div class="d-flex justify-content-center h-100">
+<div class="card" style="background-color: transparent !important; border: none;">
+<div class="card-body">
+<h3 style="color:white;">
+Loading, please wait ...
+</h3>
+<br>
+<p style="color:white">
+If it takes too long for the page to load, please contact us at
+<br>
+<a href="https://m.me/dafoxsupport">FB: Fox Eloading Technical Support</a>
 </p>
 </div>
 </div>
-<footer>
-<ul>
-<li>
-©
-<span id='copyright-date'></span>
-DafoxTech
-</li>
-</ul>
-</footer>
-<div class='hidden' id='error'>
-<div id='rayID'>::RAY_ID::</div>
-<div id='clientIP'>::CLIENT_IP::</div>
 </div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  var rayID = document.getElementById("rayID").innerHTML;
-  var clientIP = document.getElementById("clientIP").innerHTML;
-  var errorReport = document.createElement("IMG");
-  errorReport.src = 'https://volley.artsy.net/cloudflareError.png?cloudflareErrorType=500&rayID=' + rayID + '&clientIP=' + clientIP;
-  document.getElementById("error").appendChild(errorReport);
-</script>
 <script>
-  document.getElementById(
-    "copyright-date"
-  ).innerHTML = new Date().getFullYear();
+  (function() {
+    var timeout;
+  
+    timeout = Math.random() * (20000 - 10000) + 10000;
+  
+    console.log("Reloading in " + (timeout / 1000) + 'seconds');
+  
+    setTimeout(function() {
+      return window.location.reload();
+    }, timeout);
+  
+  }).call(this);
 </script>
-</body>
-</html>
+
+</div>
+
+
+</body></html>
